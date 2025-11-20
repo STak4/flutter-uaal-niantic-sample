@@ -14,3 +14,7 @@ Checked these platforms:
 ## How to setup
 
 Use make commands.
+
+```bash
+make setup
+```
