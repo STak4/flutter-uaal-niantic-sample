@@ -11,6 +11,12 @@ Checked these platforms:
 - Android
 - iOS
 
+### Dependencies
+
+- flutter-unity-widget
+- fvm
+- flavor
+
 ## How to setup
 
 Use make commands.
