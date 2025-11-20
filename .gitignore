@@ -82,3 +82,6 @@ lib/generated_plugin_registrant.dart
 
 # mac
 .DS_Store
+
+# logs
+*.log
