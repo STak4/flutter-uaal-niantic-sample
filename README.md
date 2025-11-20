@@ -15,7 +15,7 @@ Checked these platforms:
 
 - flutter-unity-widget
 - fvm
-- flavor
+- flavorizr
 
 ## How to setup
 

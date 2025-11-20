@@ -1,0 +1,6 @@
+#include "../../Flutter/stgProfile.xcconfig"
+#include "Warnings.xcconfig"
+
+ASSET_PREFIX=stg
+BUNDLE_NAME=Flutter UaaL with Niantic Stg
+BUNDLE_DISPLAY_NAME=Flutter UaaL with Niantic Stg
