@@ -12,3 +12,6 @@ setup:
 
 rename:
 	dart run package_rename
+
+icons:
+	dart run flutter_launcher_icons
