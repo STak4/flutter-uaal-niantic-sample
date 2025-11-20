@@ -10,8 +10,10 @@ setup:
 	fvm global stable
 	flutter pub get
 
-rename:
-	dart run package_rename
-
 icons:
 	dart run flutter_launcher_icons
+
+build-apk:
+	flutter build apk --release
+build-ipa:
+	flutter build ipa --export-options-plist=ExportOptions.plist
