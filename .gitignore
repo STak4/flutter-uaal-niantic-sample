@@ -74,3 +74,11 @@ lib/generated_plugin_registrant.dart
 
 # plist
 **/ExportOptions.plist
+
+# IDEs
+**/.vscode
+**/.idea
+**/.cursor
+
+# mac
+.DS_Store
