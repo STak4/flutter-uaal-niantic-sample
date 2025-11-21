@@ -1,0 +1,6 @@
+#include "../../Flutter/prodRelease.xcconfig"
+#include "Warnings.xcconfig"
+
+ASSET_PREFIX=prod
+BUNDLE_NAME=Flutter UaaL with Niantic
+BUNDLE_DISPLAY_NAME=Flutter UaaL with Niantic
