@@ -73,6 +73,7 @@ lib/generated_plugin_registrant.dart
 .fvm/
 
 # plist
+plist/
 **/ExportOptions.plist
 
 # IDEs

@@ -50,36 +50,39 @@ flavors:
       bundleId: "com.stak4.flutteruaalnianticsample.dev"
       # firebase:
       #   config: "lib/core/firebase/dev/GoogleService-Info.plist"
-# INFO: 不要なものはコメントアウトする
-# instructions:
-# - assets:download
-# - assets:extract
-# - android:androidManifest
-# - android:buildGradle
-# - android:dummyAssets
-# - android:icons
-# - flutter:flavors
-# - flutter:app
-# - flutter:pages
-# - flutter:main
-# - flutter:targets
-# - ios:podfile
-# - ios:xcconfig
-# - ios:buildTargets
-# - ios:schema
-# - ios:dummyAssets
-# - ios:icons
-# - ios:plist
-# - ios:launchScreen
-# - macos:podfile
-# - macos:xcconfig
-# - macos:configs
-# - macos:buildTargets
-# - macos:schema
-# - macos:dummyAssets
-# - macos:icons
-# - macos:plist
-# - google:firebase
-# - huawei:agconnect
-# - assets:clean
-# - ide:config
+
+instructions: [
+    "assets:download",
+    "assets:extract",
+    "android:androidManifest",
+    "android:buildGradle",
+    "android:dummyAssets",
+    "android:icons",
+    # 初回にmainが変わらないようにするため
+    # https://zenn.dev/rescuenow/articles/69f462b338ffd1
+    #"flutter:flavors",
+    #"flutter:app",
+    #"flutter:pages",
+    #"flutter:main",
+    "flutter:targets",
+    "ios:podfile",
+    "ios:xcconfig",
+    "ios:buildTargets",
+    "ios:schema",
+    "ios:dummyAssets",
+    "ios:icons",
+    "ios:plist",
+    "ios:launchScreen",
+    "macos:podfile",
+    "macos:xcconfig",
+    "macos:configs",
+    "macos:buildTargets",
+    "macos:schema",
+    "macos:dummyAssets",
+    "macos:icons",
+    "macos:plist",
+    "google:firebase",
+    "huawei:agconnect",
+    "assets:clean",
+    "ide:config",
+  ]
