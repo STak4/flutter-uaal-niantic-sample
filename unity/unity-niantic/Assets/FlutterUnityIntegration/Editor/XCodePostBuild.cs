@@ -516,8 +516,6 @@ namespace FlutterUnityIntegration.Editor
     }
 }
 
-#endif
-
 /// <summary>
 /// $EDIT: Helper
 /// </summary>
@@ -531,3 +529,4 @@ internal static class Helper
         return charLocation > 0 ? text[..charLocation] : string.Empty;
     }
 }
+#endif
