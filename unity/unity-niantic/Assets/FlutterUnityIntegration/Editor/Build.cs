@@ -679,12 +679,12 @@ dependencies {
             }
             else
             {
-                if (!appBuildScript.Contains(@"implementation project(':unityLibrary')"))
+                if (!appBuildScript.Contains(@"implementation(project("":unityLibrary"")"))
                 {
                     var regex = new Regex(@"dependencies \{", RegexOptions.Multiline);
                     appBuildScript = regex.Replace(appBuildScript, @"
 dependencies {
-    implementation project(':unityLibrary')
+    implementation(project("""":unityLibrary""""))
 ");
                     File.WriteAllText(appBuildPath, appBuildScript);
                 }
