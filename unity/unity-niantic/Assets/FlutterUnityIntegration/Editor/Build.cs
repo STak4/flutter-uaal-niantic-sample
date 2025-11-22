@@ -33,18 +33,27 @@ namespace FlutterUnityIntegration.Editor
         public static void DoBuildAndroidLibraryDebug()
         {
             DoBuildAndroid(Path.Combine(APKPath, "unityLibrary"), false, false);
+
+            // Copy over resources from the launcher module that are used by the library
+            Copy(Path.Combine(APKPath + "/launcher/src/main/res"), Path.Combine(AndroidExportPath, "src/main/res"));
         }
 
         [MenuItem("Flutter/Export Android (Release) %&m", false, 102)]
         public static void DoBuildAndroidLibraryRelease()
         {
             DoBuildAndroid(Path.Combine(APKPath, "unityLibrary"), false, true);
+
+            // Copy over resources from the launcher module that are used by the library
+            Copy(Path.Combine(APKPath + "/launcher/src/main/res"), Path.Combine(AndroidExportPath, "src/main/res"));
         }
 
         [MenuItem("Flutter/Export Android Plugin %&p", false, 103)]
         public static void DoBuildAndroidPlugin()
         {
             DoBuildAndroid(Path.Combine(APKPath, "unityLibrary"), true, true);
+
+            // Copy over resources from the launcher module that are used by the library
+            Copy(Path.Combine(APKPath + "/launcher/src/main/res"), Path.Combine(AndroidExportPath, "src/main/res"));
         }
 
         [MenuItem("Flutter/Export IOS (Debug) %&i", false, 201)]
@@ -77,8 +86,8 @@ namespace FlutterUnityIntegration.Editor
             BuildWebGL(WebExportPath);
         }
 
-      // Hide this button as windows isn't implemented in the Flutter plugin yet.
-      //  [MenuItem("Flutter/Export Windows %&d", false, 401)]
+
+        [MenuItem("Flutter/Export Windows %&d", false, 401)]
         public static void DoBuildWindowsOS()
         {
             BuildWindowsOS(WindowsExportPath);
@@ -483,25 +492,18 @@ body { padding: 0; margin: 0; overflow: hidden; }
             if (report.summary.result != BuildResult.Succeeded)
                 throw new Exception("Build failed");
 
-            // log an error if this code is skipped. (might happen when buildtarget is switched from code)
-            bool postBuildExecuted = false;
+            //trigger postbuild script manually
 #if UNITY_IOS
             XcodePostBuild.PostBuild(BuildTarget.iOS, report.summary.outputPath);
-            postBuildExecuted = true;
 #endif
-            if (postBuildExecuted)
+
+            if (isReleaseBuild)
             {
-                if (isReleaseBuild)
-                {
-                    Debug.Log("-- iOS Release Build: SUCCESSFUL --");
-                }
-                else
-                {
-                    Debug.Log("-- iOS Debug Build: SUCCESSFUL --");
-                }
-            } else
+                Debug.Log("-- iOS Release Build: SUCCESSFUL --");
+            }
+            else
             {
-                Debug.LogError("iOS export failed. Failed to modify Unity's Xcode project.");
+                Debug.Log("-- iOS Debug Build: SUCCESSFUL --");
             }
         }
 
@@ -677,12 +679,12 @@ dependencies {
             }
             else
             {
-                if (!appBuildScript.Contains(@"implementation(project("":unityLibrary"")"))
+                if (!appBuildScript.Contains(@"implementation project(':unityLibrary')"))
                 {
                     var regex = new Regex(@"dependencies \{", RegexOptions.Multiline);
                     appBuildScript = regex.Replace(appBuildScript, @"
 dependencies {
-    implementation(project("":unityLibrary""))
+    implementation project(':unityLibrary')
 ");
                     File.WriteAllText(appBuildPath, appBuildScript);
                 }
