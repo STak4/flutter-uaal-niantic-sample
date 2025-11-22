@@ -1,7 +1,7 @@
 SHELL := /bin/zsh
 .SHELLFLAGS := -c
 
-UNITY_APP_NAME=flutter_uaal_niantic_sample
+UNITY_APP_NAME=unity-niantic
 EXPORT_OPTIONS_PLIST=ExportOptions.plist
 
 .PHONY: build-runner watch codegen unity xcode update-icon
@@ -9,6 +9,8 @@ EXPORT_OPTIONS_PLIST=ExportOptions.plist
 setup:
 	fvm global stable
 	flutter pub get
+	cd ios && pod install
+	cd unity/$(UNITY_APP_NAME) && make setup
 
 icons:
 	dart run flutter_launcher_icons
