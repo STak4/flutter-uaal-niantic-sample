@@ -86,3 +86,7 @@ plist/
 
 # logs
 *.log
+
+# Unity binaries
+android/unityLibrary/
+ios/UnityLibrary/
