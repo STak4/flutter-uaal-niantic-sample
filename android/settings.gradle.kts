@@ -27,3 +27,6 @@ include(":app")
 
 include(":unityLibrary")
 project(":unityLibrary").projectDir = file("./unityLibrary")
+
+// settings.gradle.kts (Flutter 3.29+)
+include(":unityLibrary:xrmanifest.androidlib")
