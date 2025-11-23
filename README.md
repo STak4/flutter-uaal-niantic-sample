@@ -25,74 +25,16 @@ Use make commands.
 make setup
 ```
 
-## How to run
+Other commands can refer in HOWTOUSE.md
 
-Use make commands or run with flavor.
+## Known issues
 
-```bash
-make run
-```
+### Flutter
 
-or
+### Unity
 
-```bash
-flutter run --flavor dev
-```
+1. (Editor) The following asset(s) located in immutable packages were
+   unexpectedly altered.
 
-## How to build
-
-Use make commands or run with flavor.
-
-### Android
-
-#### dev
-
-```bash
-make build-apk
-```
-
-or
-
-```bash
-flutter build apk --flavor dev
-```
-
-#### Prod
-
-```bash
-make build-apk-prod
-```
-
-or
-
-```bash
-flutter build apk --flavor prod
-```
-
-### iOS
-
-**Need ExportOptions.plist!!**
-
-#### dev
-
-```bash
-make build-ipa
-```
-
-or
-
-```bash
-flutter flutter build ipa --export-options-plist=plist/ExportOptions.dev.plist --flavor dev
-```
-
-#### prod
-
-```bash
-make build-ipa-prod
-```
-
-or
-
-```bash
-flutter flutter build ipa --export-options-plist=plist/ExportOptions.prod.plist --flavor prod
-```
+- ARFoundation bug. Please refer
+  IssueTracker(https://issuetracker.unity3d.com/issues/the-following-asset-s-located-in-immutable-packages-were-unexpectedly-altered-warning-is-thrown-after-building-macos-dedicated-server-platform-on-ar-mobile-template)
