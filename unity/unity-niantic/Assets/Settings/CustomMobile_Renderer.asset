@@ -26,7 +26,8 @@ MonoBehaviour:
     probeVolumeBlendStatesCS: {fileID: 0}
   m_RendererFeatures:
   - {fileID: 7662534133497545652}
-  m_RendererFeatureMap: b4436d5232ca566a
+  - {fileID: 2555396786925904075}
+  m_RendererFeatureMap: b4436d5232ca566acba0e4b0d6977623
   m_UseNativeRenderPass: 1
   xrSystemData: {fileID: 0}
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
@@ -52,6 +53,19 @@ MonoBehaviour:
   m_DepthTextureFormat: 0
   m_AccurateGbufferNormals: 0
   m_IntermediateTextureMode: 0
+--- !u!114 &2555396786925904075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e45ab1ab4ee44b7a9da21bdc7b9a9e5, type: 3}
+  m_Name: LightshipOcclusionExtensionFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
 --- !u!114 &7662534133497545652
 MonoBehaviour:
   m_ObjectHideFlags: 0
