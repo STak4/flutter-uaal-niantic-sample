@@ -17,6 +17,8 @@
 		5D0D5EBE221FF901E8B82C8D /* prodLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DAD2A78D99F98C7D9C00088 /* prodLaunchScreen.storyboard */; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
 		9136B4BFA2F77ECC4F57E9D3 /* stgProfile.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9C3678F6670127DF7F1B6A8A /* stgProfile.xcconfig */; };
+		9441C95A2ED3E3910030EAF7 /* LightshipARDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9441C9542ED3E3770030EAF7 /* LightshipARDK.framework */; };
+		9441C95B2ED3E3910030EAF7 /* LightshipARDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9441C9542ED3E3770030EAF7 /* LightshipARDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		948715612ED03CB30082E0BF /* UnityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9487155E2ED03C3F0082E0BF /* UnityFramework.framework */; };
 		948715622ED03CB30082E0BF /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9487155E2ED03C3F0082E0BF /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9487157E2ED141030082E0BF /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C639234D9C0CF09614E4343B /* Pods_Runner.framework */; };
@@ -80,6 +82,7 @@
 			files = (
 				9487157F2ED141030082E0BF /* Pods_Runner.framework in Embed Frameworks */,
 				948715622ED03CB30082E0BF /* UnityFramework.framework in Embed Frameworks */,
+				9441C95B2ED3E3910030EAF7 /* LightshipARDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,6 +120,7 @@
 		7AFA3C8E1D35360C0083082E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Flutter/Release.xcconfig; sourceTree = "<group>"; };
 		8BA87E93336B09F03374C66D /* Pods-Runner.profile-dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile-dev.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile-dev.xcconfig"; sourceTree = "<group>"; };
 		8DEB0B5BC965AF4B5CA7170D /* Pods-RunnerTests.debug-stg.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.debug-stg.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.debug-stg.xcconfig"; sourceTree = "<group>"; };
+		9441C9542ED3E3770030EAF7 /* LightshipARDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LightshipARDK.framework; sourceTree = "<group>"; };
 		948715522ED03C3F0082E0BF /* Unity-iPhone.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Unity-iPhone.xcodeproj"; path = "UnityLibrary/Unity-iPhone.xcodeproj"; sourceTree = "<group>"; };
 		9740EEB21CF90195004384FC /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Flutter/Debug.xcconfig; sourceTree = "<group>"; };
 		9740EEB31CF90195004384FC /* Generated.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Generated.xcconfig; path = Flutter/Generated.xcconfig; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 			files = (
 				9487157E2ED141030082E0BF /* Pods_Runner.framework in Frameworks */,
 				948715612ED03CB30082E0BF /* UnityFramework.framework in Frameworks */,
+				9441C95A2ED3E3910030EAF7 /* LightshipARDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +206,39 @@
 				0AF408A636D5671C83D2432F /* Pods-RunnerTests.release-dev.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9441C9552ED3E3770030EAF7 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9441C9542ED3E3770030EAF7 /* LightshipARDK.framework */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		9441C9562ED3E3770030EAF7 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				9441C9552ED3E3770030EAF7 /* iOS */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		9441C9572ED3E3770030EAF7 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				9441C9562ED3E3770030EAF7 /* Plugins */,
+			);
+			path = Runtime;
+			sourceTree = "<group>";
+		};
+		9441C9582ED3E3770030EAF7 /* com.nianticlabs.lightship */ = {
+			isa = PBXGroup;
+			children = (
+				9441C9572ED3E3770030EAF7 /* Runtime */,
+			);
+			name = com.nianticlabs.lightship;
+			path = UnityLibrary/Frameworks/com.nianticlabs.lightship;
 			sourceTree = "<group>";
 		};
 		948715532ED03C3F0082E0BF /* Products */ = {
@@ -279,6 +317,7 @@
 			children = (
 				C639234D9C0CF09614E4343B /* Pods_Runner.framework */,
 				4BF483296A3ACB3C85B4E35C /* Pods_RunnerTests.framework */,
+				9441C9582ED3E3770030EAF7 /* com.nianticlabs.lightship */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -585,7 +624,15 @@
 			baseConfigurationReference = E799F7339370155516F2BFB3 /* prodProfile.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = G5Z6XH4S6F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnityLibrary/Frameworks/com.nianticlabs.lightship/Runtime/Plugins/iOS",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnityLibrary/Frameworks/com.nianticlabs.lightship/Runtime/Plugins/iOS/LightshipARDK.framework",
+				);
 				MARKETING_VERSION = 2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -738,7 +785,15 @@
 			baseConfigurationReference = 60278C3AC16BE51D6D1D49E7 /* prodRelease.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = G5Z6XH4S6F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnityLibrary/Frameworks/com.nianticlabs.lightship/Runtime/Plugins/iOS",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnityLibrary/Frameworks/com.nianticlabs.lightship/Runtime/Plugins/iOS/LightshipARDK.framework",
+				);
 				MARKETING_VERSION = 2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -805,11 +860,19 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = G5Z6XH4S6F;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnityLibrary/Frameworks/com.nianticlabs.lightship/Runtime/Plugins/iOS",
+				);
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnityLibrary/Frameworks/com.nianticlabs.lightship/Runtime/Plugins/iOS/LightshipARDK.framework",
 				);
 				MARKETING_VERSION = 2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stak4.flutteruaalnianticsample;
@@ -825,7 +888,15 @@
 			baseConfigurationReference = 77C8B99710C1CF54595E1762 /* stgDebug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = G5Z6XH4S6F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnityLibrary/Frameworks/com.nianticlabs.lightship/Runtime/Plugins/iOS",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnityLibrary/Frameworks/com.nianticlabs.lightship/Runtime/Plugins/iOS/LightshipARDK.framework",
+				);
 				MARKETING_VERSION = 2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -886,7 +957,15 @@
 			baseConfigurationReference = B9103A355D65A4FBF584413C /* devDebug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = G5Z6XH4S6F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnityLibrary/Frameworks/com.nianticlabs.lightship/Runtime/Plugins/iOS",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnityLibrary/Frameworks/com.nianticlabs.lightship/Runtime/Plugins/iOS/LightshipARDK.framework",
+				);
 				MARKETING_VERSION = 2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -969,7 +1048,15 @@
 			baseConfigurationReference = 08204B3248225EB944B9D51A /* devRelease.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = G5Z6XH4S6F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnityLibrary/Frameworks/com.nianticlabs.lightship/Runtime/Plugins/iOS",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnityLibrary/Frameworks/com.nianticlabs.lightship/Runtime/Plugins/iOS/LightshipARDK.framework",
+				);
 				MARKETING_VERSION = 2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1237,11 +1324,19 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = G5Z6XH4S6F;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnityLibrary/Frameworks/com.nianticlabs.lightship/Runtime/Plugins/iOS",
+				);
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnityLibrary/Frameworks/com.nianticlabs.lightship/Runtime/Plugins/iOS/LightshipARDK.framework",
 				);
 				MARKETING_VERSION = 2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stak4.flutteruaalnianticsample;
@@ -1262,11 +1357,19 @@
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = G5Z6XH4S6F;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnityLibrary/Frameworks/com.nianticlabs.lightship/Runtime/Plugins/iOS",
+				);
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnityLibrary/Frameworks/com.nianticlabs.lightship/Runtime/Plugins/iOS/LightshipARDK.framework",
 				);
 				MARKETING_VERSION = 2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.stak4.flutteruaalnianticsample;
@@ -1357,7 +1460,15 @@
 			baseConfigurationReference = DA81B82F9367140426BA8C1A /* stgRelease.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = G5Z6XH4S6F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnityLibrary/Frameworks/com.nianticlabs.lightship/Runtime/Plugins/iOS",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnityLibrary/Frameworks/com.nianticlabs.lightship/Runtime/Plugins/iOS/LightshipARDK.framework",
+				);
 				MARKETING_VERSION = 2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1440,7 +1551,15 @@
 			baseConfigurationReference = 9C3678F6670127DF7F1B6A8A /* stgProfile.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = G5Z6XH4S6F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnityLibrary/Frameworks/com.nianticlabs.lightship/Runtime/Plugins/iOS",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnityLibrary/Frameworks/com.nianticlabs.lightship/Runtime/Plugins/iOS/LightshipARDK.framework",
+				);
 				MARKETING_VERSION = 2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1671,7 +1790,15 @@
 			baseConfigurationReference = 07F5D155817C5B1DEF91EE37 /* prodDebug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = G5Z6XH4S6F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnityLibrary/Frameworks/com.nianticlabs.lightship/Runtime/Plugins/iOS",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnityLibrary/Frameworks/com.nianticlabs.lightship/Runtime/Plugins/iOS/LightshipARDK.framework",
+				);
 				MARKETING_VERSION = 2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -1682,7 +1809,15 @@
 			baseConfigurationReference = 5CE913EA1DED208146CCBA16 /* devProfile.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = G5Z6XH4S6F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnityLibrary/Frameworks/com.nianticlabs.lightship/Runtime/Plugins/iOS",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UnityLibrary/Frameworks/com.nianticlabs.lightship/Runtime/Plugins/iOS/LightshipARDK.framework",
+				);
 				MARKETING_VERSION = 2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
