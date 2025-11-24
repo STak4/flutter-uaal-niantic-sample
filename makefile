@@ -10,7 +10,6 @@ setup:
 	fvm global stable
 	flutter pub get
 	cd ios && pod install
-	cd unity/$(UNITY_APP_NAME) && make setup
 
 icons:
 	dart run flutter_launcher_icons
