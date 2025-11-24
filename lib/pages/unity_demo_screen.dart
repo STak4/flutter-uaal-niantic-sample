@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_unity_widget/flutter_unity_widget.dart';
 
 class UnityDemoScreen extends StatefulWidget {
-  const UnityDemoScreen({Key? key}) : super(key: key);
+  const UnityDemoScreen({super.key});
 
   @override
   State<UnityDemoScreen> createState() => _UnityDemoScreenState();
@@ -22,5 +22,11 @@ class _UnityDemoScreenState extends State<UnityDemoScreen> {
   // Callback that connects the created controller to the unity controller
   void onUnityCreated(UnityWidgetController controller) {
     _unityWidgetController = controller;
+  }
+
+  @override
+  void dispose() {
+    _unityWidgetController?.dispose();
+    super.dispose();
   }
 }
