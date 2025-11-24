@@ -1,9 +1,9 @@
 {
   "dependencies": {
     "com.nianticlabs.lightship": {
-      "version": "file:com.nianticlabs.lightship",
+      "version": "file:com.nianticlabs.lightship-3.16.0-2509150829.tgz",
       "depth": 0,
-      "source": "embedded",
+      "source": "local-tarball",
       "dependencies": {
         "com.unity.editorcoroutines": "1.0.0",
         "com.unity.xr.arfoundation": "5.2.0",
