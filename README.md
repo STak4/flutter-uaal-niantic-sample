@@ -1,5 +1,7 @@
 # Flutter x Unity as a Library (+Lightship ARDK) Template
 
+[日本語版](docs/README_jp.md) | [English](README.md)
+
 ## Table of Contents
 
 - [1. About](#1-about)
