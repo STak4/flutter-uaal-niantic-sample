@@ -101,5 +101,5 @@ InitTestScene*.unity*
 # Lightship caches
 data/
 
-# Lightship Env
+# Lightship Env (DO NOT PUSH API KEYS!!)
 LightshipSettings.asset

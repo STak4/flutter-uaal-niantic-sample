@@ -1,9 +1,9 @@
-[日本語版](HOWTOUSE_jp.md) | [English](HOWTOUSE.md)
+[English](HOWTOUSE.md) | [日本語版](HOWTOUSE_jp.md)
 
-## Table of Contents
+## 目次
 
-- [How to Run](#how-to-run)
-- [How to Build](#how-to-build)
+- [実行方法](#実行方法)
+- [ビルド方法](#ビルド方法)
   - [Android](#android)
     - [dev](#dev)
     - [prod](#prod)
@@ -11,23 +11,23 @@
     - [dev](#dev-1)
     - [prod](#prod-1)
 
-## How to Run
+## 実行方法
 
-You can run the project using make commands or directly with Flutter:
+makeコマンドまたはFlutterコマンドを直接使用してプロジェクトを実行できます：
 
 ```bash
 make run
 ```
 
-or
+または
 
 ```bash
 flutter run --flavor dev
 ```
 
-## How to Build
+## ビルド方法
 
-You can build the project using make commands or directly with Flutter.
+makeコマンドまたはFlutterコマンドを直接使用してプロジェクトをビルドできます。
 
 ### Android
 
@@ -37,7 +37,7 @@ You can build the project using make commands or directly with Flutter.
 make build-apk
 ```
 
-or
+または
 
 ```bash
 flutter build apk --flavor dev
@@ -49,7 +49,7 @@ flutter build apk --flavor dev
 make build-apk-prod
 ```
 
-or
+または
 
 ```bash
 flutter build apk --flavor prod
@@ -57,7 +57,7 @@ flutter build apk --flavor prod
 
 ### iOS
 
-**Note: ExportOptions.plist is required for iOS builds.**
+**注意: iOSビルドにはExportOptions.plistが必要です。**
 
 #### dev
 
@@ -65,7 +65,7 @@ flutter build apk --flavor prod
 make build-ipa
 ```
 
-or
+または
 
 ```bash
 flutter build ipa --export-options-plist=plist/ExportOptions.dev.plist --flavor dev
@@ -77,7 +77,7 @@ flutter build ipa --export-options-plist=plist/ExportOptions.dev.plist --flavor 
 make build-ipa-prod
 ```
 
-or
+または
 
 ```bash
 flutter build ipa --export-options-plist=plist/ExportOptions.prod.plist --flavor prod
